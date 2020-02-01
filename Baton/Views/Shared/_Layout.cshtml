@@ -12,16 +12,16 @@
     <div class="container">
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="/">Буратіно</a>
+            <a class="navbar-brand" href="@Url.Action("Index","Home")">Bakery</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="/">Мальвіна</a>
-                    <a class="nav-item nav-link active" href="/gallery.html">
-                        Галерея <span class="sr-only">(current)</span>
+                    <a class="nav-item nav-link" href="@Url.Action("Index","Home")">Bakery</a>
+                    <a class="nav-item nav-link" href="@Url.Action("About","Home")">
+                        About <span class="sr-only">(current)</span>
                     </a>
                 </div>
             </div>
