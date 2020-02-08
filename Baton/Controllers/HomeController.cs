@@ -1,4 +1,5 @@
-﻿using Baton.Models;
+﻿using Baton.Entities;
+using Baton.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,13 +40,20 @@ namespace Baton.Controllers
         [HttpPost]
         public ActionResult Add(ProductAddModel model)
         {
-            ProductModel item = new ProductModel
-            {
-                Id = products.Count + 1,
-                Name = model.Name,
-                Image = model.Image
-            };
-            products.Add(item);
+            MyContext context = new MyContext();
+
+            //ProductModel item = new ProductModel
+            //{
+            //    Id = products.Count + 1,
+            //    Name = model.Name,
+            //    Image = model.Image
+            //};
+            //products.Add(item);
+            Category c = new Category();
+            c.Name = model.Name;
+            context.Categories.Add(c);
+            context.SaveChanges();
+
             return RedirectToAction("Index");
         }
         // GET: Home
